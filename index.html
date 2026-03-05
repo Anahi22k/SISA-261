@@ -1,73 +1,331 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Queer Africa: Narratives & Freedom</title>
-<link rel="stylesheet" href="style.css">
+<title>Opacity: Rethinking African Gender & Sexuality</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0d0d13;
+color:white;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+section{
+min-height:100vh;
+padding:80px 12%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+h2{
+font-size:2.5rem;
+margin-bottom:20px;
+color:#9b7cff;
+}
+
+p{
+max-width:800px;
+margin-bottom:20px;
+font-size:1.1rem;
+}
+
+.hero{
+background:linear-gradient(135deg,#ff2a6d,#9b5cff,#00d4ff);
+text-align:center;
+}
+
+.hero p{
+margin:auto;
+font-size:1.2rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+background:#1b1b26;
+padding:25px;
+border-radius:10px;
+transition:all .3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,.5);
+}
+
+.alt{
+background:#151520;
+}
+
+button{
+padding:12px 22px;
+background:#ff2a6d;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+margin-top:20px;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff5b90;
+}
+
+.label-grid{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.label{
+background:#242437;
+padding:12px 18px;
+border-radius:20px;
+cursor:pointer;
+}
+
+.hidden{
+opacity:0;
+transition:1s;
+}
+
+.visible{
+opacity:1;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#0b0b11;
+font-size:14px;
+}
+
+.scroll-indicator{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:#ff2a6d;
+width:0%;
+z-index:999;
+}
+
+</style>
 </head>
 
 <body>
 
-<header class="hero">
-<h1>Queer Africa</h1>
-<p>Gender, Sexuality, and Cultural Narratives Across the Continent</p>
-<p class="subtitle">An interactive visual project</p>
-</header>
+<div class="scroll-indicator" id="progressBar"></div>
 
-<section class="section">
-<h2>Colonial Narratives</h2>
+<section class="hero">
+<h1>Opacity</h1>
+<p>Rethinking Gender & Sexuality in African Histories</p>
+
 <p>
-For decades, the claim that homosexuality is "un‑African" has been repeated in political and cultural debates.
-However, scholars and activists argue that many of the laws criminalizing queer identities were introduced during
-European colonial rule. Understanding this history reveals how sexuality and power are intertwined with colonialism.
+This digital project explores how African gender and sexual identities have been interpreted,
+misinterpreted, and politicized through colonial history, Western scholarship,
+and contemporary identity frameworks.
 </p>
+
+<p>
+Drawing on Keguro Macharia’s concept of <strong>opacity</strong>,
+this project asks whether the past should always be explained,
+or whether some histories resist modern categories.
+</p>
+
 </section>
 
-<section class="section alt">
-<h2>African Queer Voices</h2>
-<div class="cards">
+<section>
+
+<h2>Studying Africa</h2>
+
+<p>
+African scholars have long questioned the ethics of how Africa has been studied.
+Knowledge about African societies has often been produced through Western
+academic institutions, where African people are treated as objects of study
+rather than producers of theory.
+</p>
+
+<p>
+This raises important questions: Who has authority to interpret African
+sexualities? Who benefits from that knowledge? And whose voices are recognized
+within academic discourse?
+</p>
+
+<div class="grid">
 
 <div class="card">
-<h3>Kenya</h3>
-<p>The film <em>Rafiki</em> portrays a love story between two young women in Nairobi and challenges narratives
-that queer identities do not belong in African society.</p>
+<h3>Anthropology</h3>
+<p>Colonial anthropology frequently categorized African societies through Western frameworks.</p>
 </div>
 
 <div class="card">
-<h3>South Africa</h3>
-<p>South Africa has one of the most progressive constitutions in the world regarding LGBTQ+ rights, while
-artists and scholars explore gender beyond Western categories.</p>
+<h3>Archives</h3>
+<p>Historical archives often reflect colonial power structures and selective documentation.</p>
 </div>
 
 <div class="card">
-<h3>Nigeria</h3>
-<p>Writers and artists use literature and storytelling to create spaces where queer African identities
-can exist despite legal and social challenges.</p>
+<h3>Authority</h3>
+<p>Academic authority determines whose research becomes recognized knowledge.</p>
 </div>
 
 </div>
+
 </section>
 
-<section class="section">
+<section class="alt">
+
+<h2>The Myth of "Un-African"</h2>
+
+<p>
+Across contemporary political debates, homosexuality is often described as
+“un-African.” However, many laws criminalizing same-sex relationships
+originated during European colonial rule.
+</p>
+
+<p>
+These legal systems were imposed across African territories and remain embedded
+within modern national legal frameworks. As a result, sexuality politics today
+cannot be understood without examining colonial histories.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>Colonial Law</h3>
+<p>Anti-sodomy laws were introduced by European colonial administrations.</p>
+</div>
+
+<div class="card">
+<h3>Postcolonial States</h3>
+<p>Many African nations inherited colonial legal structures after independence.</p>
+</div>
+
+<div class="card">
+<h3>Modern Politics</h3>
+<p>These colonial laws continue shaping contemporary debates about sexuality.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Opacity: Letting the Past Remain Complex</h2>
+
+<p>
+Keguro Macharia argues that scholars should grant the past
+“the right to opacity.” Rather than forcing historical
+experiences into modern identity categories, we must recognize
+that past gender and sexual formations may not translate
+into contemporary frameworks.
+</p>
+
+<p>
+Click the identity labels below.
+</p>
+
+<div class="label-grid">
+
+<div class="label" onclick="reveal()">Gay</div>
+<div class="label" onclick="reveal()">Trans</div>
+<div class="label" onclick="reveal()">Bisexual</div>
+<div class="label" onclick="reveal()">Queer</div>
+
+</div>
+
+<p id="opacityMessage" class="hidden" style="margin-top:25px;font-size:1.3rem;color:#00d4ff;">
+What if these categories do not apply to the past?
+</p>
+
+</section>
+
+<section class="alt">
+
 <h2>Imagining Freedom</h2>
+
 <p>
-African filmmakers, writers, and scholars imagine new futures where gender and sexuality are not restricted
-by colonial categories or rigid identities. Cultural production — film, literature, art, and music — becomes
-a powerful tool for expressing freedom and belonging.
+African filmmakers, writers, and artists are imagining new
+possibilities for gender and sexuality beyond colonial categories.
+Through literature, cinema, and visual art, cultural production
+creates spaces where queer African identities can be explored,
+represented, and reimagined.
 </p>
 
-<button onclick="showQuote()">Reveal Quote</button>
-<p id="quote"></p>
+<div class="grid">
+
+<div class="card">
+<h3>Film</h3>
+<p>Movies like <em>Rafiki</em> challenge dominant narratives about African sexuality.</p>
+</div>
+
+<div class="card">
+<h3>Literature</h3>
+<p>Queer African writers explore identity, belonging, and resistance.</p>
+</div>
+
+<div class="card">
+<h3>Art</h3>
+<p>Visual and performance art imagine new futures for gender and freedom.</p>
+</div>
+
+</div>
 
 </section>
 
 <footer>
+
 <p>Digital Project | African Queer Studies</p>
-<p>Created with HTML, CSS, and JavaScript</p>
+<p>Exploring Gender, Sexuality, and Knowledge Production</p>
+
 </footer>
 
-<script src="script.js"></script>
+<script>
+
+function reveal(){
+
+let message = document.getElementById("opacityMessage");
+
+message.classList.remove("hidden");
+message.classList.add("visible");
+
+}
+
+window.onscroll = function() {
+let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+let scrolled = (winScroll / height) * 100;
+document.getElementById("progressBar").style.width = scrolled + "%";
+};
+
+</script>
+
 </body>
 </html>
